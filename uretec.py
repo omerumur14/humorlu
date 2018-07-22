@@ -58,7 +58,7 @@ place = [
 	"parkta",
 	"otogarda",
 	"yetimhanede",
-	"hastaneda",
+	"hastanede",
 ]
 
 def uretec():
