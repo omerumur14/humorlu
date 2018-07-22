@@ -1,4 +1,4 @@
-from random import randint
+from random import choice, randint
 
 city = [
 	"Ankara",
@@ -63,6 +63,6 @@ place = [
 
 def uretec():
 	if randint(0,1) % 2 == 0:
-		return "{}'da {} saatlerinde sağanak {} bekleniyor".format(city[randint(0,4)], time[randint(0, 3)], naturel_event[randint(0,2)])
+		return "{}'da {} saatlerinde sağanak {} bekleniyor".format(choice(city), choice(time), choice(naturel_event))
 	else:
-		return "{} bugün {}'da bir {} görüldü".format(famous[randint(0,20)], district[randint(0,4)], place[randint(0,4)])
+		return "{} bugün {}'da bir {} görüldü".format(choice(famous), choice(district), choice(place))
