@@ -1,6 +1,6 @@
 from random import choice, randint
 
-city = [
+cities = [
 	"Ankara",
 	"İstanbul",
 	"Ordu",
@@ -8,7 +8,7 @@ city = [
 	"Trabzon",
 ]
 
-famous = [
+famous_people = [
 	"Hüseyin",
 	"Veli",
 	"Burcu",
@@ -32,20 +32,20 @@ famous = [
 	"Pamir",
 ]
 
-time = [
+times = [
 	"sabah",
 	"akşam",
 	"gece",
 	"öğle",
 ]
 
-naturel_event = [
+natural_events = [
 	"yağmur",
 	"dolu yağışı",
 	"kar yağışı",
 ]
 
-district = [
+districts = [
 	"Aksaray",
 	"Avcılar",
 	"Gürpınar",
@@ -53,16 +53,18 @@ district = [
 	"Esenyurt",
 ]
 
-place = [
+places = [
 	"restoranda",
 	"parkta",
 	"otogarda",
 	"yetimhanede",
 	"hastanede",
 ]
+def yazi_tura():
+	return choice([True, False])
 
 def uretec():
-	if randint(0,1) % 2 == 0:
+	if  yazi_tura():
 		return "{}'da {} saatlerinde sağanak {} bekleniyor".format(choice(city), choice(time), choice(naturel_event))
 	else:
 		return "{} bugün {}'da bir {} görüldü".format(choice(famous), choice(district), choice(place))
